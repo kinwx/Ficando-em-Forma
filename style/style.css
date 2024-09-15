@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --labels-txt-clr: #fff;
+    --labels-txt-smooth-clr: #f3f3f3;
+    --bck-btn-clr: #275790;
+    --hover-btn-clr: #063a7a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    list-style: none;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    background-image: url("https://www.dudkowiak.com/wp-content/uploads/2023/01/property1-2048x1239.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+
+    font-size: calc(10px + 1vmin);
+}
+
+main {
+    width: 1440px;
+    margin: 0 auto;
+    padding-top: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+header {
+    width: 100%;
+    padding: 1.2rem 1.8rem;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, .3);
+
+    background-color: #fff;
+    border-radius: 5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > ul, .logo, .login-setup {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Deixar em negrito a section "home" na navbar */
+nav > ul > li:first-child {
+    font-weight: 700;
+    cursor: pointer;
+    pointer-events: none;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+}
+nav > ul a:hover {
+    text-decoration: underline;
+}
+nav .circle {
+    padding: .9rem;
+}
+
+ul { 
+    justify-content: space-between;
+}
+.logo {
+    pointer-events: none;
+    justify-content: center;
+    
+    & > h2 {
+        font-family: "Alfa Slab One", serif;
+        font-size: calc(10px + 2.9vmin);
+    }
+}
+.login-setup {
+    justify-content: flex-end;
+    gap: 2rem;
+}
+    .btn-sing-up {
+        padding: .6rem 1.2rem;
+        border-radius: 5rem;
+    }
+    .btn-light {
+        border: none;
+        background-color: var(--bck-btn-clr);
+        color: #fff;
+        cursor: pointer;
+        transition: all .4s ease;
+
+        &:hover {
+            background-color: var(--hover-btn-clr);
+        }
+    }
+
+.labels {
+    height: max-content;
+    color: var(--labels-txt-clr);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
+    & > * {
+        max-width: 50%;
+    }
+}
+    .title {
+        font-size: calc(10px + 10vmin);
+    }
+    .description {
+        font-size: calc(10px + 1.1vmin);
+        text-align: justify;
+    }
+.bar-features {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+    .feature {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        flex: 1;
+    }
+            .feature:not(.feature:nth-child(4)) {
+                border-right: 1px solid #ccc;
+            }
+    .feature > small {
+        color: var(--labels-txt-smooth-clr);
+        font-weight: 400;
+        pointer-events: none;
+    }
+    .feature > span {
+        display: flex;
+        gap: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+    }
+            .circle {
+                padding: 1.5rem;
+                border-radius: 50%;
+                display: flex;
+                place-items: center;
+            }
+.burger-menu {
+    display: none;
+}
+
+.bar-company{
+    background-color: #fff;
+    width: 100vw;
+
+    padding: 1rem 0;
+    margin-top: 1rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.logo-partners {
+    aspect-ratio: 16/9;
+    width: calc(10px + 25vmin);
+    object-fit: contain;
+}

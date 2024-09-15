@@ -1,0 +1,75 @@
+@media screen and (max-width: 1440px) {
+    main, .container { 
+        max-width: 1024px;
+    }
+    .container { 
+        overflow-x: scroll;
+        gap: 3rem;
+    }
+    .container::-webkit-scrollbar {
+        height: .2rem;
+        background-color: transparent;
+    }
+    .container::-webkit-scrollbar-thumb {
+        height: 100%;
+        border-radius: 10rem;
+        background-color: #ccc;
+    }
+    .labels {
+        font-size: 80%;
+        & > * {
+            max-width: 60%;
+        }
+    }
+}
+@media screen and (max-width: 1024px) {
+    main, .container { 
+        max-width: 834px;
+    }
+    .labels{
+        color: var(--labels-txt-smooth-clr);
+        align-items: center;
+        & > * {
+            max-width: 70%;
+        }
+    }
+    .title, .description {
+        text-align: center;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, .4);
+    }
+}
+@media screen and (max-width: 834px) {
+    main, .container { 
+        max-width: 768px;
+    }
+}
+@media screen and (max-width: 768px) {
+    main, .container { 
+        max-width: 480px;
+    }
+    /* deixando desativados navbar em labels e navegação em header */
+    .bar-features, nav > ul, .logo {
+        display: none;
+    }
+    header {
+        padding: .4rem .8rem .4rem .3rem;
+    }
+    nav {
+        flex-direction: row-reverse;
+    }
+            nav > * {
+                max-width: max-content;
+            }
+    .burger-menu {
+        display: flex;
+    } 
+}
+@media screen and (max-width: 480px) {
+    main, .container { 
+        width: 100vw;
+        padding: 0 .5rem;
+    }
+    main {
+        padding-top: 2rem;
+    }
+}
